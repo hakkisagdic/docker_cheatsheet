@@ -61,6 +61,26 @@ Run a Nginx web server (in detached mode so that it runs in the background) in T
         cd /usr/share/nginx/html
         vim index.html
 
+------------------------------------------------------------------
+$ docker run -dt <image>
+$ docker exec -it <container> <command>
+– example –
+
+$ docker run -dt alpine:latest
+c7d42807e9c083f3cf88fea7ec476ad86525ac2b9dfc816fd75bfb150d4c8920
+
+$ docker ps
+CONTAINER ID  IMAGE          COMMAND    CREATED    STATUS      PORTS   NAMES
+c7d42807e9c0  alpine:latest  "/bin/sh"  1 sec ago  Up 1 sec            alpine
+
+$ docker exec -it c7d42807e9c0 cat /etc/alpine-release
+3.11.6
+Option	Description
+-i, --interactive	Keep STDIN open even if not attached
+-t, --tty	Allocate a pseudo-TTY
+-d, --detach	Run the container in the background (detached mode)
+------------------------------------------------------------------
+
 You may see the top processes running inside your container with:
 
     docker top webserver
