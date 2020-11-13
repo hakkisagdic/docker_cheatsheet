@@ -23,6 +23,10 @@
 
 ## 1. The Basics
 
+------------------------------------------------------------------
+https://medium.com/devopsturkiye/docker-container-ve-swarm-mode-f6975717647e
+------------------------------------------------------------------
+
 After [downloading and installing docker CE](https://www.docker.com/community-edition#/download) you should add your user to the docker group, so that you don’t have to sudo every command:
 
 	sudo usermod -aG docker <user>
